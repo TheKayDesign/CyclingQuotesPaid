@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/javascript.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+    // Call onDeviceReady when Cordova is loaded.
+    //
+    // At this point, the document has loaded but cordova-1.7.0.js has not.
+    // When Cordova is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+		
+    }
+
+    function onDeviceReady() {
+		document.addEventListener("backbutton", onBackKeyDown, false);
+		 myFunction();
+   // document.removeEventListener('deviceready', onDeviceReady, false);
+
+
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+   /* function onDeviceReady() {
+		 document.addEventListener("backbutton", onBackKeyDown, false);
+		 myFunction();
+    }*/
+	
+	function onBackKeyDown() {
+		/*document.getElementById("Outer2").style.display = "block";
+		document.getElementById("Outer").style.display = "none";
+		document.getElementById("Outer4").style.display = "none";
+		document.getElementById("Outer3").style.display = "none";*/
+		document.getElementById("LogoBoxZindex").style.visibility = "visible";
+	/*	MSApp.terminateApp();
+		window.open("ms-windows-store://review/?ProductId=9mv4pl5bngs1", "_self");
+		alert('backbutton');*/
+    }
+	
+	function ConfirmExit() {
+		document.getElementById("Outer2").style.display = "block"
+		document.getElementById("Outer").style.display = "none";
+		document.getElementById("Outer4").style.display = "none";
+		document.getElementById("Outer3").style.display = "none";;
+		/*MSApp.terminateApp(); - windows exit code*/
+		navigator.app.exitApp();  /* andriod exit code */
+	/*	alert('backbutton');*/
+		 }
+
+    </script>
+       <title>Zen Quotes App</title>
+</head>
+<body onload="onLoad()"><div id="LogoBoxZindex"><div id="ExitScreen">
+  <p style="font-family:Arial;font-weight:bold;color:#ffffff;font-size:1.6em;">Quit?</p>
+                 <div id="StartButtons">
+ 
+  <button class="ExitButton" onclick="ConfirmExit();">YES</button>
+              </div> 
+               <div id="StartButtons">
+ 
+  <button class="ExitButton" onclick="document.getElementById('LogoBoxZindex').style.visibility = 'hidden';">NO</button>
+              </div> 
+               <div id="StartButtons">
+ 
+  <button class="ExitButton" onclick="window.open('market://details?id=com.kaydownes.ZenQuotes', '_system');">RATE APP</button>
+              </div> 
+</div></div>
+
+<div id="Outer2"><a name="TopStartPage"></a><div align="center">
+    <div class="Inner">
+   <!-- test -->  
+    <div align="center"><div id="MainQuote"><div id="LogoBox"><img src="img/ZinYangLogo75x75.png" class="LogoImg"></div>
+     
+        <h1>Cycling Quotes</h1>  <div class="AboutText">Your daily fix of Cycling Tips, Jokes, Quotes and Annecdotes to help educate, entertain and inspire you on your future cycling adventures...  </div>
+        
+       <div id="StartButtons">
+        <button class="StartmyButton" onclick="var now = new Date(); var start = new Date(now.getFullYear(), 0, 0); var diff = now - start; var oneDay = 1000 * 60 * 60 * 24; var day = Math.floor(diff / oneDay); document.getElementById('Outer').style.display = 'block'; document.getElementById('Outer2').style.display = 'none';document.getElementById('Outer3').style.display = 'none';document.getElementById('Outer4').style.display = 'none';getElementById('demo2').innerHTML=car[day];document.getElementById('Texty').innerHTML='Today\'s Quote'; todaysDate();window.location = '#TopPage';">Today's Quote</button>
+
+  
+  <button class="StartmyButton" onclick="document.getElementById('Outer4').style.display = 'block';document.getElementById('Outer3').style.display = 'none';document.getElementById('Outer').style.display = 'none'; document.getElementById('Outer2').style.display = 'none';window.location = '#TopAboutPage';">About</button>
+
+  
+  <button class="StartmyButton" onclick="select=1;document.getElementById('Outer3').style.display = 'block';document.getElementById('Outer').style.display = 'none';document.getElementById('Outer4').style.display = 'none'; document.getElementById('Outer2').style.display = 'none';window.location = '#TopStudyPage';admob.requestInterstitialAd({
+    autoShowInterstitial: true
+});">Cycling Study</button>
+  
+<!--  <button class="StartmyButton" onclick="Windows.System.Launcher.LaunchUriAsync(new Uri(ms-windows-store://review/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe));');">Rate This App</button>-->
+  
+  
+  </div>
+       <blockquote>&nbsp;</blockquote>
+<!-- end QuoteExt --></div><!-- end MainQuote --></div>
+<div align="center">
+  <div id="TheKayCredit"><div class="KayCredit">
+     <!-- <a href="http://www.kaydownes.com" target="_system" style="color: #ffffff;text-decoration:none;">--><a href="#" onclick="window.open('http://www.kaydownes.com/','_system');" style="color: #ffffff;text-decoration:none; text-shadow: 2px 2px 4px #000000;">Designed & Developed by<br>www.kaydownes.com</a></div>
+</div>
+  <p>&nbsp;</p>
+
+<!-- end div centre --></div> 
+<!-- end div ButtonInner -->
+    </div> <!-- end class Inner -->
+    </div> <!-- end class div center -->
+
+</div>
+<div id="Outer"><a name="TopPage"></a>
+<div align="center">
+    <div class="Inner">
+    <div align="center"><div id="MainQuote"><div id="LogoBox"><img src="img/ZinYangLogo75x75.png" class="LogoImg"></div>
+     
+        <h1><div id="Texty"></div></h1>      
+        <div class="QuoteText"><p id="demo2"><p><!--Although you may not always be able to avoid difficult situations, you can modify the extent to which you can suffer by how you choose to respond to the situation.</p>--><!--"It is easy to believe we are each wave and forget we are also
+the ocean."--></div>
+<div class="DateText" id="demo"></div>
+<!-- end QuoteExt --></div><!-- end MainQuote --></div>
+<div align="center">
+  <div id="ButtonInner">
+    <div id="MainQuote2"><button class="myButton" onclick="var now = new Date(); var start = new Date(now.getFullYear(), 0, 0); var diff = now - start; var oneDay = 1000 * 60 * 60 * 24; var day = Math.floor(diff / oneDay ); getElementById('demo2').innerHTML=car[day];document.getElementById('Texty').innerHTML='Today\'s Quote'; todaysDate();window.location = '#TopPage';">Today's<br>Quote</button>
+    
+    </div>
+    
+    <div id="MainQuote2b"><button class="myButton" onclick="getElementById('demo2').innerHTML=car[+Math.floor((Math.random() * 366) + 1)];document.getElementById('Texty').innerHTML='Random Quote'; todaysDate();window.location = '#TopPage';">Random<br>Quote</button>
+    </div>
+    
+    <div id="MainQuote2">
+      <button class="myButton2" onclick="select=2;document.getElementById('Outer3').style.display = 'block';document.getElementById('Outer').style.display = 'none';document.getElementById('Outer4').style.display = 'none'; document.getElementById('Outer2').style.display = 'none';window.location = '#TopStudyPage';">Cycling<br>Study</button></div>
+    
+        <div id="MainQuote2b"><button class="myButton2" onclick="document.getElementById('Outer2').style.display = 'block';document.getElementById('Outer').style.display = 'none';document.getElementById('Outer4').style.display = 'none'; document.getElementById('Outer3').style.display = 'none';window.location = '#TopStartPage';">&#9664;&#9664;<br>Back</button></div>
+
+</div> <!-- end buttno inner -->
+    
+  <!--  <div id="TheKayCredit"><div class="KayCreditBlack">Designed & Developed by<br>
+     <!-- <a href="http://www.kaydownes.com" target="_blank" style="color: #000000;text-decoration:none;">www.kaydownes.com</a>--><!--<a href="#" onclick="window.open('http://www.kaydownes.com/','_system');" style="color: #000000;text-decoration:none;">www.kaydownes.com</a></div>
+  </div>--> <!-- end div button inner -->
+  
+  <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!-- end div centre --></div> 
+    </div> <!-- end class Inner -->
+    </div> <!-- end class div center -->
+    </div> <!-- end ID outer -->
+
+
+<!-- books page -->
+
+<div id="Outer4"><a name="TopAboutPage"></a>
+<div align="center">
+   <div class="Inner">
+    <div align="center"><div id="MainQuote"><div id="LogoBox"><img src="img/ZinYangLogo75x75.png" class="LogoImg"></div><h1>About</h1>
+          <div class="AboutText">I hope you enjoy using this app. <br>
+            This free version has adverts to reflect the time and effort spent creating it.<br></div>
+            <br><br><br>
+         <div class="AboutText"><span style="font-weight:bold;color:#faa61a;"> Advert Free Version</span><br>
+            For a 100% advert free version of this app click the button below.
+          </div>
+ 
+               <div id="StartButtons">
+ 
+  <button class="StartmyButton"  onclick="window.open('market://details?id=com.kaydownes.ZenBuddhaQuotes', '_system');">Advert Free Version</button>
+    
+          </div> 
+          
+  <div class="AboutText"> Cycling Quotes is 
+    created by<br>
+    <a href="#" onclick="window.open('http://www.kaydownes.com/','_system');" style="color: #ffffff;text-decoration:none;">www.kaydownes.com</a>
+  </div>
+        <table width="96%" border="0" style="padding-top:15px">
+            <tr>
+              <td width="42%"></td>
+              <td width="20%" align="center" valign="middle" style="text-align: center"><div id="LogoBox3"><img onclick="document.getElementById('Outer2').style.display = 'block';document.getElementById('Outer3').style.display = 'none';document.getElementById('Outer4').style.display = 'none'; document.getElementById('Outer').style.display = 'none';window.location = '#TopStartPage';" src="img/back-button.png" class="LogoImg2"></div></td>
+              <td width="37%"></td>
+            </tr>
+          </table>
+        <br><br>
+        <!--<p></p>-->
+
+            
+           
+        </div> 
+</div><!-- end MainQuote --></div>
+</div></div>  
+
+<!-- end books page -->
+
+<!-- about page-->
+
+<div id="Outer3"><a name="TopStudyPage"></a>
+<div align="center">
+<div class="InnerScrollBooks">
+   <div class="Inner">
+    
+    <div id="MainQuote">
+    
+   <table width="96%" border="0" style="padding-top:15px">
+  <tr>
+    <td width="20%"><div id="LogoBox2"><img onclick="backFunction();" src="img/ZinYangLogo106.png" class="LogoImg2"><!--<img src="img/ZinYangLogo106.png" class="LogoImg2">--></div></td>
+    <td width="60%" align="center" valign="middle" style="text-align: center"><span class="ReadingTitle">Recommended Reading</span></td>
+    <td width="20%"><div id="LogoBox2"><img onclick="backFunction();" src="img/back-button.png" class="LogoImg2"></div></td>
+  </tr>
+</table>
+            
+        <div id="TheKayCredit">
+          <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0340733500/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0340733500&linkCode=as2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">--><a href="#" onclick="window.open('https://www.amazon.co.uk/gp/search/ref=as_li_qf_sp_sr_il_tl?ie=UTF8&tag=cyclicalen0b-21&keywords=Cycling Science: How Rider and Machine Work Together&index=aps&camp=1634&creative=6738&linkCode=xm2&linkId=a7da856dd89bf0f1d1917d42647a68bf/','_system', 'location=yes');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Cycling Science: How Rider and Machine Work Together</a></span><br><span class="BookText">Cycling can represent sporting drama, environmental awareness, practical mobility, an escape to nature, an aid to fitness, a political commitment, even a desire for ostentatious display. At its heart, the simple process of getting about on two wheels contains a wealth of fascinating science.
+Cycling Science investigates the scientific wonders that keep the cyclist in the saddle.The perfect way to analyse your own kit and technique by studying the techniques of the professionals, Cycling Science is the ultimate accessory for any cyclist wishing to understand their craft.<br></span><span class="BookTextLink">
+<!-- <a href="https://www.amazon.co.uk/gp/product/0340733500/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0340733500&linkCode=as2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>--> <a href="#" onclick="window.open('https://www.amazon.co.uk/gp/search/ref=as_li_qf_sp_sr_il_tl?ie=UTF8&tag=cyclicalen0b-21&keywords=Cycling Science: How Rider and Machine Work Together&index=aps&camp=1634&creative=6738&linkCode=xm2&linkId=a7da856dd89bf0f1d1917d42647a68bf/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a></span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0340822538/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0340822538&linkCode=as2&tag=cyclicalen0b-21"_target"_system" style="color: #faa61a;text-decoration:none; font-weight:bold;">Practising The Power Of Now:<BR> Meditations, Exercises and Core Teachings from The Power of Now</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1444767534/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1444767534&linkId=6bf2d72dac74c10dca0161634554b6f7','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">The Rules: The Way of the Cycling Disciple</a>
+<br></span><span class="BookText">THE WAY OF THE CYCLING DISCIPLE
+
+Rule #6: Free your mind and your legs will follow.
+
+<br>
+Rule #9: If you cycle in bad weather, it means you are a badass. Period.
+
+<br>
+Rule #12: The correct number of bikes to own is n+1, where n is the number of bikes currently owned.
+
+<br>
+THE VELOMINATI embrace cycling not as a pastime, but as a way of life, as obsessed with style, heritage, authenticity and wisdom as with performance.
+
+THE RULES is their Bible. It is an essential part of every cyclist's arsenal - whether you're grudgingly cycling to work in the rain or gearing up to be the next Bradley Wiggins, Chris Hoy or Victoria Pendleton.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0340822538/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0340822538&linkCode=as2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1444767534/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1444767534&linkId=6bf2d72dac74c10dca0161634554b6f7','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0140195963/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0140195963&linkCode=as2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">Buddhism Plain and Simple (Arkana)</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1780976550/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1780976550&linkId=8f04c78bd9742a51daebf785fac40484/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Cycling Plus: Total Road Cycling</a>  
+</span><br><span class="BookText">Cycling has never been more popular, whether as a pro-level sport on TV, as a way of commuting on city streets, or as a massive participation sport involving millions of dedicated road riders. This book is aimed at those legions of weekend heroes of all levels of fitness and experience who inhabit the world of road riding, from those entering their first charity event to seasoned riders looking to improve their performance. Everything that these riders need to know is here, in one comprehensive volume.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0140195963/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0140195963&linkCode=as2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1780976550/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1780976550&linkId=8f04c78bd9742a51daebf785fac40484/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a></span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0340750154/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0340750154&linkCode=as2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">The Art of Happiness: A Handbook for Living</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1781314497/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1781314497&linkId=f4dfc8c83e345af5ba086f5740b2029f/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Alpe d'Huez: The Story of Pro Cycling's Greatest Climb</a>  
+</span><br><span class="BookText">It has been called the Tour de France’s ‘Hollywood climb’, and there is no doubt that Alpe d’Huez has played a starring role in cycling’s history since its first encounter with the sport back in 1952 when the legendary Fausto Coppi triumphed on the summit. Re-introduced to the Tour in 1976, Alpe d’Huez has risen to mythical status, thanks initially to a string of victories by riders from Holland, whose exploits attracted tens of thousands of their compatriots to the climb, which has become known as ‘Dutch mountain’.<br></span><span class="BookTextLink">
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1781314497/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1781314497&linkId=f4dfc8c83e345af5ba086f5740b2029f/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+<!--<a href="https://www.amazon.co.uk/gp/product/0340750154/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0340750154&linkCode=as2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+</span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1503322610?ie=UTF8&camp=1634&creativeASIN=1503322610&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">Zen: Beginner's Guide: Happy, Peaceful and Focused Lifestyle for Everyone (Buddhism, Meditation, Mindfulness, Success) (Positive Psychology Coaching Series Book 7)</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1904207642/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1904207642&linkId=a54c740836be1157a313b4b196d2e24d/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Mountain Biking Tricks and Techniques</a>  
+</span><br><span class="BookText">"Mountain Biking Tricks and Techniques" is the definitive guide to riding a mountain bike. Within its pages, you will find everything you need to know from the basics of how to balance on a bike right through to how to back flip one giving aspiring riders the skills they need to be a better biker - whatever type of riding they do. Your guide is Martyn Ashton, a man who's spent nearly 20 years at the top of the UK scene, and the book is beautifully illustrated throughout by photographer Robin Kitchin. <br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1503322610?ie=UTF8&camp=1634&creativeASIN=1503322610&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1904207642/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1904207642&linkId=a54c740836be1157a313b4b196d2e24d/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a></span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1590302834?ie=UTF8&camp=1634&creativeASIN=1590302834&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">ZEN Training: Methods and Philosophy (Shambhala Classics)</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1910240362/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1910240362&linkId=e8fe186c370bd8eb69c93feda346b124/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Alps Mountain Biking: From Aosta to Zermatt: The Best Singletrack, Enduro and Downhill Trails in the Alps</a>
+  </span><br><span class="BookText">Alps Mountain Biking has everything you need to get out of the concrete resorts and plan a great riding trip. Written by Samoëns-based guide Steve Mallett, it gives you the local riders' inside knowledge on trails, and information on accommodation, lifts and travel. Packed with fantastic photography, it is guaranteed to inspire you to get out and explore this huge mountain bike playground.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1590302834?ie=UTF8&camp=1634&creativeASIN=1590302834&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1910240362/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1910240362&linkId=e8fe186c370bd8eb69c93feda346b124/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a></span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0804832471?ie=UTF8&camp=1634&creativeASIN=0804832471&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">An Introduction to Zen Training: Sanzen Nyumon</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/193771537X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=193771537X&linkId=8c3d95056ce035c466af4496fc7b6c291/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Zinn & the Art of Road Bike Maintenance: The World's Best-Selling Bicycle Repair and Maintenance Guide</a>
+</span><br><span class="BookText">Zinn & the Art of Road Bike Maintenance is the world's best-selling guide to bicycle repair and maintenance. From basic repairs like how to fix a flat tire to advanced overhauls of drivetrains and brakes, Lennard Zinn's clearly illustrated guide makes every bicycle repair and maintenance job easy for everyone.<br></span><span class="BookTextLink">
+
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/193771537X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=193771537X&linkId=8c3d95056ce035c466af4496fc7b6c29/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a><!--<a href="https://www.amazon.co.uk/gp/product/0804832471?ie=UTF8&camp=1634&creativeASIN=0804832471&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>--></span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1570629528?ie=UTF8&camp=1634&creativeASIN=1570629528&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">The Eight Gates of Zen: A Program of Zen Training</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/097655304X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=097655304X&linkId=8895b8de58a4473beea729996f1d2fb2/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Park Tool Big Blue Book of Bicycle Repair - 3rd Edition </a>  
+</span><br><span class="BookText">Complete repair manual created to provide both the novice and veteran mechanic the information needed to perform nearly any repair. 
+Updated with new information, techniques, photos, procedures, and components. 
+The perfect reference guide and step-by-step repair manual for nearly any bike, including road, mountain, bmx, and single-speed<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1570629528?ie=UTF8&camp=1634&creativeASIN=1570629528&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/097655304X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=097655304X&linkId=8895b8de58a4473beea729996f1d2fb2/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1844135683?ie=UTF8&camp=1634&creativeASIN=1844135683&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">The Buddha, Geoff and Me: A Modern Story </a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1408133334/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1408133334&linkId=21d22e70d80e6e8ab5577d8c23f28799/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Tour de France Legendary Climbs</a>  
+</span><br><span class="BookText">Experience the thrill and intensity of the Tour de France's most challenging climbs as never before, using the breathtaking photography of Google Earth. In this stunning book, 20 notorious Tour de France Hors Catégorie climbs - ascents that are above classification - from past and present races are illustrated using Google Earth's high-definition satellite imagery. From the dizzying heights of the 2,715-metre ascent of Col de la Bonette to the historic Great St Bernard Pass, to Col du Galibier's incredibly tortuous 15 percent gradient climb and Alpe d'Huez's famous hairpins, where legendary cyclists such as Fausto Coppi and Marco Pantani once showed off their physical strength and stamina, and blasted home with unbelievable acceleration and will-power that left other cyclists tasting their dust.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1844135683?ie=UTF8&camp=1634&creativeASIN=1844135683&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1408133334/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1408133334&linkId=21d22e70d80e6e8ab5577d8c23f28799/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1846044294?ie=UTF8&camp=1634&creativeASIN=1846044294&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">Bodhisattva Blues</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1530798906/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1530798906&linkId=0f709e1abad7f7444abd38b6db720a43/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Ultralight Cycle Touring</a>  
+</span><br><span class="BookText">Learn how to create your perfect ultralight cycle touring setup and become self-sufficient with just 4.2kg of equipment. Ultralight Cycle Touring is full of tips and techniques that will enable you to do more with less and enjoy your adventures unencumbered.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1846044294?ie=UTF8&camp=1634&creativeASIN=1846044294&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1530798906/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1530798906&linkId=0f709e1abad7f7444abd38b6db720a43/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1590302915?ie=UTF8&camp=1634&creativeASIN=1590302915&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">How to Cook Your Life: From the ZEN Kitchen to Enlightenment</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/B00GUVJ2VQ/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B00GUVJ2VQ&linkId=2030fb793f2092b77876befcfd9cb972/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Cycling Home From Siberia</a>  
+</span><br><span class="BookText">'It is late October, and the temperature is already -40C...My thoughts are filled with frozen rivers that may or may not hold my weight; empty, forgotten valleys haunted by emaciated ghosts and packs of ravenous, merciless wolves.'In 2004 Rob Lilwall arrived in Siberia equipped only with a bike and a healthy dose of fear. CYCLING HOME FROM SIBERIA recounts his epic three and a half year, 30,000 mile journey back to England via the foreboding jungles of Papua New Guinea, an Australian cyclone and Afghanistan's war-torn Hindu Kush.A gripping story of endurance and adventure, this is also a spiritual journey giving a poignant insight into life on the road in some of the world's toughest corners.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1590302915?ie=UTF8&camp=1634&creativeASIN=1590302915&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/B00GUVJ2VQ/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=B00GUVJ2VQ&linkId=2030fb793f2092b77876befcfd9cb972/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a></span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0877734313?ie=UTF8&camp=1634&creativeASIN=0877734313&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">Returning to Silence: Zen Practice in Everyday Life</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1934030201/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1934030201&linkId=3c6044f8bf7394ea689c785a9431449b/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">The Cyclist's Training Bible</a>  
+</span><br><span class="BookText">Coach Joe Friel is the most trusted name in endurance sports coaching, and his Cyclist's Training Bible is the most comprehensive and reliable training resource ever written for cyclists. This new edition of the bestselling book includes all of the latest advances in training and technology. Using this book, cyclists can create a comprehensive, self-coached training plan that is both scientifically proven and shaped around their personal goals.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0877734313?ie=UTF8&camp=1634&creativeASIN=0877734313&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1934030201/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1934030201&linkId=3c6044f8bf7394ea689c785a9431449b/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/111802379X?ie=UTF8&camp=1634&creativeASIN=111802379X&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">Buddhism For Dummies</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1472936930/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1472936930&linkId=b55a146d298cc38c00ff1146b54ec649/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Fuelling the Cycling Revolution: The Nutritional Strategies and Recipes Behind Grand Tour Wins and Olympic Gold Medals</a>  
+</span><br>
+<span class="BookText">The must-read practical guide to what to eat (on and off the bike) for any cyclist looking for a training or performance advantage
+
+If you're looking for success on the bike what you eat is at the core of all your training. You are what you eat - and if you're on the bike for long periods and expecting results then your diet is crucial. Get it wrong and you can feel sluggish and below par - but eat right and all the training and preparation will be worth it. <br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/111802379X?ie=UTF8&camp=1634&creativeASIN=111802379X&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>--><a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1472936930/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1472936930&linkId=b55a146d298cc38c00ff1146b54ec649/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a></span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1846041058?ie=UTF8&camp=1634&creativeASIN=1846041058&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">The Tibetan Book Of Living And Dying: A Spiritual Classic from One of the Foremost Interpreters of Tibetan Buddhism to the West </a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1937715248/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1937715248&linkId=2a8caccecdde38d8e57b7b862626ee23/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Pro Cycling on $10 a Day: From Fat Kid to Euro Pro</a>  
+</span><br><span class="BookText">Plump, grumpy, slumped on the couch, and going nowhere fast at age 16, Phil Gaimon began riding a bicycle with the grand ambition of shedding a few pounds before going off to college. He soon fell into racing and discovered he was a natural, riding his way into a pro contract after just one season despite utter ignorance of a century of cycling etiquette. Now, in his book Pro Cycling on $10 a Day, Phil brings the full powers of his wit to tell his story.'<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1846041058?ie=UTF8&camp=1634&creativeASIN=1846041058&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1937715248/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1937715248&linkId=2a8caccecdde38d8e57b7b862626ee23/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1400080797?ie=UTF8&camp=1634&creativeASIN=1400080797&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">The Quantum and the Lotus: A Journey to the Frontiers Where Science and Buddhism Meet</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1937715507/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1937715507&linkId=3e0c75782527d8f3150bb79cf68fe432/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">The Time-Crunched Cyclist: Racing-Winning Fitness in 6 Hours a Week, 3rd Ed. (Time-Crunched Athlete)</a>  
+</span><br>
+  <span class="BookText">The Time-Crunched Cyclist reveals the fastest way to get fit for road racing, century rides, gravel grinders, cyclocross, Gran Fondos, and mountain bike events. With elite cycling coach Chris Carmichael's innovative, time-saving approach, busy cyclists will develop fitness, speed, and power in just 6 hours a week. Now powered by Strava, this updated third edition of The Time-Crunched Cyclist training program taps into the most popular cycling social network to help cyclists get fired up to crush their workouts, one segment at a time.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1400080797?ie=UTF8&camp=1634&creativeASIN=1400080797&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1937715507/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1937715507&linkId=3e0c75782527d8f3150bb79cf68fe432/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span>  
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/1608683885?ie=UTF8&camp=1634&creativeASIN=1608683885&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">Don't Be a Jerk: And Other Practical Advice from Dogen, Japan's Greatest Zen Master </a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1934030953/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1934030953&linkId=833e9cf4f1d868ac033a68de55ce159b/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">The Power Meter Handbook: A User's Guide for Cyclists and Triathletes</a>  
+</span><br><span class="BookText">Power meters measure a cyclist s strength, but this revolutionary training technology can benefit everyone, not just the most powerful riders. In The Power Meter Handbook, the most trusted coach in endurance sports offers a simple user s guide to help cyclists and triathletes master the fundamentals of training with power. Friel shows cyclists how to sift through noisy data to focus on just the most important measurements. Armed with the techniques they need to know, riders will master power training concepts, accurately interpret their data, and learn how to harness this revolutionary technology to earn big performance gains from their day-to-day training. In simple language, the most trusted coach in endurance sports makes understanding a power meter easy, no advanced degrees or tech savvy required.<br></span><span class="BookTextLink"><!--"https://www.amazon.co.uk/gp/product/1608683885?ie=UTF8&camp=1634&creativeASIN=1608683885&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1934030953/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1934030953&linkId=833e9cf4f1d868ac033a68de55ce159b/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0385527071?ie=UTF8&camp=1634&creativeASIN=0385527071&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">Confession of a Buddhist Atheist</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1905864256/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1905864256&linkId=a412395ab1f62bfc14a68c1533e656b3/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">Adventure Cycle-Touring Handbook: Worldwide route and planning guide </a>  
+</span><br><span class="BookText">Fully revised and updated 3rd edition of the indispensable guide for anyone planning (or dreaming) about taking their bicycle on a long-distance adventure. This comprehensive guide will make that dream a reality whether it's cycling from Alaska to Tierra del Fuego, across Asia, around Australia or the length of Africa.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0385527071?ie=UTF8&camp=1634&creativeASIN=0385527071&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1905864256/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1905864256&linkId=a412395ab1f62bfc14a68c1533e656b3/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/030020518X?ie=UTF8&camp=1634&creativeASIN=030020518X&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">After Buddhism: Rethinking the Dharma for a Secular Age</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1472938895/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1472938895&linkId=c84a16a493c1be4a5bfae90657a5854d','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">The Cycling Cartoonist: An Illustrated Guide to Life on Two Wheels </a>  
+</span><br><span class="BookText">A delightful celebration of cycling from renowned cartoonist and multiple-bike owner Dave Walker. With over 100 full-page cartoons that give an affectionate take on cycling in all its different forms, featuring cartoons about road cycling, mountain biking and bike ownership, via sportives and commuting - celebrating the simple pleasure of getting from A to B on two wheels.<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/030020518X?ie=UTF8&camp=1634&creativeASIN=030020518X&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1472938895/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1472938895&linkId=c84a16a493c1be4a5bfae90657a5854d/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+
+  <div class="BookTextTitle"><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0990847705?ie=UTF8&camp=1634&creativeASIN=0990847705&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;text-decoration:none; font-weight:bold;">The Mind Illuminated: A Complete Meditation Guide Integrating Buddhist Wisdom and Brain Science</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1472906594/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1472906594&linkId=ffabca654375b59b1b8f78ff6b673635/','_system');"  style="color: #faa61a;text-decoration:none; font-weight:bold;">The Pain-Free Cyclist: Conquer injury and find your cycling nirvana</a>  
+</span><br><span class="BookText">It's not (just) about the bike. Ride your bike long enough and you re likely to get injured. It s not what cyclists want to hear, but it's the hard truth.
+
+
+
+Cycling is a rapidly growing sport, and as numbers increase, so do the amount of injuries. What do you do if you get injured? Rest? Continue to ride? These questions need answering to avoid confusion, further complications and more harmful injuries, resulting in substantial time off the bike. We want more bums on saddles, enjoying their cycling, pain free. 
+
+
+
+This book takes you through the most common cycling injuries, let you know what exactly they are, why you get them and what you can do to do get rid of them and get you back on the bike pain free.
+<br></span><span class="BookTextLink"><!--<a href="https://www.amazon.co.uk/gp/product/0990847705?ie=UTF8&camp=1634&creativeASIN=0990847705&linkCode=xm2&tag=cyclicalen0b-21" style="color: #faa61a;">Click to visit Store</a>-->
+<a href="#" onclick="window.open('https://www.amazon.co.uk/gp/product/1472906594/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=cyclicalen0b-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1472906594&linkId=ffabca654375b59b1b8f78ff6b673635/','_system');"  style="color: #faa61a;text-decoration:none;">Click to visit Store</a>
+</span></div>
+  
+          <p><!-- end MainQuote --></p>
+          <p>&nbsp;</p>
+          <table width="96%" border="0" style="padding-top:15px">
+            <tr>
+              <td width="43%"></td>
+              <td width="20%" align="center" valign="middle" style="text-align: center"><div id="LogoBox3"><img onclick="backFunction();" src="img/back-button.png" class="LogoImg2"></div></td>
+              <td width="37%"></td>
+            </tr>
+          </table><p>&nbsp;</p><p>&nbsp;</p>
+        </div>
+    </div>
+   </div></div>
+</div></div></div>
+</div></div> 
+    <script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+<script type="text/javascript" src="cordova.js"></script>
+<!-- end about page -->
+
+</body>
+
+</html>

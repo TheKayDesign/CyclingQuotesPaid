@@ -195,7 +195,7 @@ car[145]="Struggling to open your bars / gels / jelly babies? Partly cut the top
 car[146]="\"The slower you go the more likely it is you’ll crash.\"<br><br><div class=\"SigText\">- Juli Furtado</div>";
 car[147]="\"Cycling has encountered more enemies than any other form of exercise.\"<br><br><div class=\"SigText\">- 19th century author Louis Baudry de Saunier</div>";
 car[148]="If someone tells you that you have enough bicycles and you don't need anymore stop talking to them... you don't need that kind of negativity in your life!"
-car[149]="Mountain Biking. Keep your legs relaxed and flexible as they are the most effective shock absorbers you have.";
+car[149]="Mountain Biking: Keep your legs relaxed and flexible as they are the most effective shock absorbers you have.";
 car[150]="An hour of cycling a day can reduce the risk of coronary heart disease by up to 50%.";
 car[151]="You are not stuck in traffic.. you are traffic. Get on a bike and break free...";
 car[152]="\"There is nothing, absolutely nothing, quite so worthwhile as simply messing about on bicycles.\"<br><br><div class=\"SigText\">– Tom Kunich</div>";
@@ -238,7 +238,7 @@ car[188]=" If you live in the UK, Consider joining British Cycling, benefits inc
 car[189]="It is better to carry a little more fuel than you think you will need rather than to run out of energy and bonk!";
 car[190]="Things to love about cycling... the rewarding freewheeling downhill after you have huffed and puffed uphill.";
 car[191]="ICE (In Case of Emergency) Put your emergency contacts on your mobile under ICE so that the police / ambulance / rescue services know who to call if you are ever involved in an accident.";
-car[192]="\"If I can bicycle, bicycle.\"<br><br><div class=\"SigText\">- Sir David Attenborough</div>";
+car[192]="\"If I can bicycle, I bicycle.\"<br><br><div class=\"SigText\">- Sir David Attenborough</div>";
 car[193]="Consider joining a breakdown recovery service such as Cycleguard Recovery (www.cycleguard.co.uk) who will rescue you if you have a breakdown over 1 mile away from home.";
 car[194]="\"Cycling is much more fun than dating... I still get to chase women, and sometimes catch them. But when I get dropped, at least there is no emotional attachment.\"<br><br><div class=\"SigText\">– T. A. Melton</div>";
 car[195]="\"You either love spinning the pedals and watching scenery whiz by, or you don’t. And if you love it, not much can sour you on the idea of riding your bike.\"<br><br><div class=\"SigText\">- Keith Mills</div>";

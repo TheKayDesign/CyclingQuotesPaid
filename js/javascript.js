@@ -93,7 +93,7 @@ car[43]="\"When my legs hurt, I say; Shut up legs! Do what I tell you to do!\"<b
 car[44]=" Joke:<br><br> Q: How did the barber win the bike race?<br><br>A: He took a short cut.";
 car[45]="All ass no gas.";
 car[46]="Joke:<br><br>\"I prefer running…\"";
-car[47]="************************************************";
+car[47]="\"If were not a man, I would like to be a bird. As I am a man, I do the next best thing, and ride a bicycle.\"<br><br><div class=\"SigText\">- Rev. Maltie (1892)</div>";
 car[48]="I came... I spun...<br>I CONQUERED!";
 car[49]="When taking the lead position in a paceline, as the former leader drops to the back, don't accelerate. Maintain the same speed as when drafting so you don't cause gaps to open between the other riders.";
 car[50]="The best invention after the wheel... was putting two of them together.";
@@ -128,7 +128,7 @@ car[78]="Break up long rides with a 15-second sprint every 30 minutes or so—ad
 car[79]="Life sucks and then... you bike!";
 car[80]="\"Shut Up Legs. Do What I Tell You To Do!\"<br><br><div class=\"SigText\">– Jens Voigt</div>";
 car[81]="Two easy (and most overlooked) ways to improve your bike's performance: Inflate the tyres before every ride, and keep the chain lubed.";
-car[82]="The Bicycle, the simple solution to some of the world's most complicated problems.";
+car[82]="The bicycle, the simple solution to some of the world's most complicated problems.";
 car[83]="Mountain Biking: When mountain biking downhill, try not to use the front brake only as you could end up going over the handlebars.";
 car[84]="Buzzing occurs when a cage, frame pump, or some other add-on vibrates, or when a cable housing quivers against the frame. To find the culprit, touch these areas while riding, then tighten, shorten, reroute, or tape as necessary.";
 car[85]="\"Bike riding is a way to explore… a way to explore nature and the world.\"<br><br><div class=\"SigText\">– Cam Zink</div>";
@@ -183,7 +183,7 @@ car[133]="♫ Always look on the bike side of life. ♫";
 car[134]="Take Your Wrappers Home! Please consider the environment and keep the countryside clean by taking your empty gel wrappers home with you after use.";
 car[135]=" Ideally you should carry a quick link and multitool with a chain splitter attached as you never know when your chain might break."
 car[136]="My biggest fear is that when I die my wife will sell my bicycles for what I told her they cost.";
-car[137]="The padding on tights and shorts are designed to be worn commando (no pants / knickers underneath) Try it... you might like it!";
+car[137]="The padding on tights and shorts are designed to be worn commando (no pants / knickers underneath). Try it... you might like it!";
 car[138]="Mountain Biking: For super steep, technical descents, you may want to drop your saddle 2 or 3 inches. This lowers your centre of gravity, giving you more room to bounce around.";
 car[139]="Commuting:<br>If you commute to work and need to change into work clothes when you get there - have some spare emergency clothes at work incase you forget to pack your daily clothes in your bag / pannier. Otherwise one day you may be spending the day working in cycling kit.";
 car[140]="Psyclepath. Noun: A person suffering from an extreme love of bicycles."
@@ -317,7 +317,7 @@ car[267]="What do pro riders eat / drink for fuel? A typical mussette can consis
 car[268]="Never trust your ear. Frames transmit noises. You might swear a sound is coming from your cranks, but it could be your saddle rails. Check all possible points.";
 car[269]="Cycling: Get out there and discover it!";
 car[270]="A chirp is almost always from the chain - it is crying out for lubrication.";
-car[271]="Try not to change your line in the middle of of corner - your front tyre could potentially wash out, especially if it's wet.";
+car[271]="Try not to change your line in the middle of a corner - your front tyre could potentially wash out, especially if it's wet.";
 car[272]="Joke:<br><br>Me: My friend's wife has made him give away all of his cycling stuff. I got his brakes.<br><br>Stooge: Cantilever?<br><br>Me: No, he loves her too much.";
 car[273]="\"If you go (with a break), you can either win or not win. If you don’t go for it, you definitely won’t win.\"<br><br><div class=\"SigText\">- Jens Voigt</div>";
 car[274]="\"Good morale in cycling comes from good legs.\"<br><br><div class=\"SigText\">- Sean Yates</div>";
@@ -331,7 +331,7 @@ car[281]="\"At that age, it’s one of the worse things in the world to wake up 
 car[282]="\"Ride lots.\"<br><br><div class=\"SigText\">- Eddie Merckx</div>";
 car[283]="\"A bicycle ride around the world begins with a single pedal stroke.\"<br><br><div class=\"SigText\">- Scott Stoll</div>";
 car[284]="Setting goals for yourself such as completing your first 100km charity ride is a great motivator.";
-car[285]="\"Start slowly, don’t aim to go too far or fast too soon. Build it up steadily over time and as you feel more confident and comfortable push your limits. Oh, and the most important tip of all….. Just enjoy yourself!\"<br><br><div class=\"SigText\">- Matt @mattmbr</div>";
+car[285]="\"Start slowly, don’t aim to go too far or fast too soon. Build it up steadily over time and as you feel more confident and comfortable push your limits. Oh, and the most important tip of all... just enjoy yourself!\"<br><br><div class=\"SigText\">- Matt @mattmbr</div>";
 car[286]="For inspiration, help and advice with like minded cyclists, consider looking at cyclng forums such as www.cyclechat.net or www.bikeradar.com";
 car[287]="For optimal handling with 20 pounds or more of cargo, put approximately 60 percent of the weight in the rear panniers or on a rack, 35 percent on a front rack or panniers, and 5 percent in a handlebar bag.";
 car[288]="\"Life may not be about your bike, but it sure can help you get through it.\"<br><br><div class=\"SigText\">- Hallman</div>";
@@ -401,7 +401,7 @@ car[351]=" \"If I had attacked one more time I would have dropped myself.\"";
 car[352]="Joke:<br><br>Since things turned sour with my wife a fortnight ago, I’ve taken to riding 50 miles a day to clear my head. I’m now 700 miles from home and feeling much happier.";
 car[353]="Sometimes I wonder... if my bike is thinking about me too...";
 car[354]="When riding in a group, always keep your hands in contact with your brakes, either in the drops or on the hoods. That way, you are always prepared to slow.";
-car[355]="Every time you put a new tire on your bike, take the opportunity to do an otherwise overlooked but important task: Grease the quick-release and mounting-bolt threads on your car rack to prevent corrosion.";
+car[355]="Every time you put a new tyre on your bike, take the opportunity to do an otherwise overlooked but important task: Grease the quick-release and mounting-bolt threads on your car rack to prevent corrosion.";
 car[356]="Joke:<br><br>Q: Why could the bike not stand up on its own?<br><br>A: It was two tyre’d.";
 car[357]="\"No hour of life is lost that is spent in the saddle.\"<br><br><div class=\"SigText\">- Winston Churchill</div>";
 car[358]="May your rubber side remain down and your shiny side up!";
